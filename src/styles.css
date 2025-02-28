@@ -1,0 +1,238 @@
+/* Resetando estilos padrões para maior consistência */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Corpo da página */
+body {
+  background: linear-gradient(
+    135deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Página inicial */
+.home {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.home h1 {
+  font-size: 2rem;
+  color: white;
+}
+
+.home p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.home button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.home button:hover {
+  background: linear-gradient(135deg, #0056b3, #004494);
+  transform: scale(1.05);
+}
+
+/* Container principal */
+.app {
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+}
+
+.app:hover {
+  transform: scale(1.02);
+}
+
+/* Título principal */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Formulário de Adicionar Tarefa */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-form input,
+.task-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.task-form input:focus,
+.task-form textarea:focus {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Botão estilizado */
+.task-form button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #4caf50, #388e3c);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.task-form button:hover {
+  background: linear-gradient(135deg, #45a049, #2e7d32);
+  transform: scale(1.05);
+}
+
+/* Lista de Tarefas */
+.task-list {
+  margin-top: 30px;
+  list-style: none;
+  padding: 0;
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.filters button {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filters button:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Tarefa individual */
+.task {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.task:hover {
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(1.02);
+}
+
+/* Títulos das tarefas */
+.task-content h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.task-content p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Botões das tarefas */
+.task-actions button {
+  padding: 8px 15px;
+  background: linear-gradient(135deg, #ff7043, #d84315);
+  color: white;
+  border-radius: 8px;
+  margin: 2px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.task-actions button:hover {
+  background: linear-gradient(135deg, #f4511e, #bf360c);
+  transform: scale(1.05);
+}
+
+/* Estilizando tarefas concluídas */
+.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .app {
+    padding: 20px;
+  }
+
+  .task-form input,
+  .task-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .task-form button {
+    font-size: 1rem;
+  }
+
+  .task {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+}
