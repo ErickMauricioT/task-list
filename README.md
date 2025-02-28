@@ -49,7 +49,7 @@ Este projeto é um aplicativo de lista de tarefas desenvolvido com React e Vite.
 
 1. Clone o repositório:
    ```sh
-   git clone https://github.com/ErickMauricioT/listagem-de-tarefas.git
+   git clone https://github.com/ErickMauricioT/task-list.git
    ```
 2. Acesse o diretório do projeto:
    ```sh
